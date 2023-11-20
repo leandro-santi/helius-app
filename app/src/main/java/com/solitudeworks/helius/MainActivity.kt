@@ -71,7 +71,7 @@ class MainActivity : AppCompatActivity() {
                     binding.tvTemperatureTitleValue.text = temperature
 
                     binding.tvThermalTitleValue.text = feelsLike
-                }
+                } else Toast.makeText(baseContext, "Error!", Toast.LENGTH_SHORT).show()
 
             }
 
