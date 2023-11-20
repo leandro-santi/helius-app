@@ -57,11 +57,20 @@ class MainActivity : AppCompatActivity() {
 
                 if (response?.code() == 200) {
                     val responseWeather = response.body()!!
-                    binding.tvCityTitleValue.text = responseWeather.name
-                    binding.tvClimateTitleValue.text =
-                        "${responseWeather.weather[0].main} (${responseWeather.weather[0].description})"
-                    binding.tvWeatherTitleValue.text = responseWeather.main.temp.toString()
-                    binding.tvThermalTitleValue.text = responseWeather.main.feelsLike.toString()
+
+                    val city = responseWeather.name
+                    val weather =
+                        responseWeather.weather[0].main + " " + "(${responseWeather.weather[0].description})"
+                    val temperature = responseWeather.main.temp.toString() + " °C"
+                    val feelsLike = responseWeather.main.feelsLike.toString() + " °C"
+
+                    binding.tvCityTitleValue.text = city
+
+                    binding.tvWeatherTitleValue.text = weather
+
+                    binding.tvTemperatureTitleValue.text = temperature
+
+                    binding.tvThermalTitleValue.text = feelsLike
                 }
 
             }

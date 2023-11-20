@@ -34,6 +34,7 @@
         android:layout_height="50dp"
         android:gravity="center"
         android:hint="Enter a city name"
+        android:inputType="text"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -45,6 +46,7 @@
         android:layout_height="50dp"
         android:gravity="center"
         android:hint="Enter a country name"
+        android:inputType="text"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -84,7 +86,7 @@
         app:layout_constraintTop_toBottomOf="@id/tv_city_title" />
 
     <TextView
-        android:id="@+id/tv_climate_title"
+        android:id="@+id/tv_weather_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -93,28 +95,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_city_title_value" />
-
-    <TextView
-        android:id="@+id/tv_climate_title_value"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text=""
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_climate_title" />
-
-    <TextView
-        android:id="@+id/tv_weather_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="Temperature:"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_climate_title_value" />
 
     <TextView
         android:id="@+id/tv_weather_title_value"
@@ -128,6 +108,28 @@
         app:layout_constraintTop_toBottomOf="@id/tv_weather_title" />
 
     <TextView
+        android:id="@+id/tv_temperature_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Temperature:"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_weather_title_value" />
+
+    <TextView
+        android:id="@+id/tv_temperature_title_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text=""
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_temperature_title" />
+
+    <TextView
         android:id="@+id/tv_thermal_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -136,7 +138,7 @@
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_weather_title_value" />
+        app:layout_constraintTop_toBottomOf="@id/tv_temperature_title_value" />
 
     <TextView
         android:id="@+id/tv_thermal_title_value"
